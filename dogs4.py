@@ -1,6 +1,16 @@
 
 class Dog:
+    '''A dog that speaks!
 
+    Attributes
+    ----------
+    name : string
+        The dog's name
+
+    breed : string
+        The dog's breed, as defined by https://www.akc.org/dog-breeds/
+
+    '''
     large_dogs = ['German Shepherd', 'Golden Retriever',
                   'Rottweiler', 'Collie',
                   'Mastiff', 'Great Dane']
@@ -13,6 +23,23 @@ class Dog:
         self.breed = br
 
     def speak(self):
+        '''Print the sound the dog makes, as appropriate for their breed
+
+        Looks up the dog breed to see if it is a large or small dog, 
+        then prints the appropriate dog vocalization. This function 
+        prints directly, it does not return the vocalization string.
+
+        See Dog.large_dogs and Dog.small_dogs for the lists of each.
+
+        Parameters
+        ----------
+        none
+
+        Returns
+        -------
+        none
+
+        '''
         if self.breed in Dog.large_dogs:
             print('woof')
         elif self.breed in Dog.small_dogs:
